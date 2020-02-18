@@ -8,3 +8,4 @@ C:\Users\user\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFo
 C:\Users\user\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
 C:\Users\user\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.VoprosForm1.resources
 C:\Users\user\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+C:\Users\user\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form2.resources
