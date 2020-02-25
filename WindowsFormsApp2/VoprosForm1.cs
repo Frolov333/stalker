@@ -120,6 +120,12 @@ namespace WindowsFormsApp2
             //MessageBox.Show("Winner");
             next();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Filter f = new Filter();
+            f.ShowDialog();
+        }
     }
 
 }
