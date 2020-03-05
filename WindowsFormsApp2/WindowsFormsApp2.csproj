@@ -58,12 +58,6 @@
     <Compile Include="Filter.Designer.cs">
       <DependentUpon>Filter.cs</DependentUpon>
     </Compile>
-    <Compile Include="bespolsi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="bespolsi.Designer.cs">
-      <DependentUpon>bespolsi.cs</DependentUpon>
-    </Compile>
     <Compile Include="Person.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,9 +72,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="bespolsi.resx">
-      <DependentUpon>bespolsi.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
