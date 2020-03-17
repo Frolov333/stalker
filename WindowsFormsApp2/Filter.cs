@@ -25,14 +25,23 @@ namespace WindowsFormsApp2
 
     public partial class Filter : Form
     {
-        pers[] lydi = new pers[4];
+        pers[] lydi = new pers[5];
         public Filter()
         {
             InitializeComponent();
             lydi[0] = new pers(1, "Сидор");
             lydi[1] = new pers(2, "Шустрый");
             lydi[2] = new pers(3, "Меченый");
-            lydi[3] = new pers(3, "Меченый");
+            lydi[3] = new pers(4, "Стрелок");
+            lydi[4] = new pers(5, "Шрам");
+            lydi[5] = new pers(6, "Шакал");
+            lydi[6] = new pers(7, "Чёрный");
+            lydi[7] = new pers(8, "Дегтярёв");
+            lydi[8] = new pers(9, "Йога");
+            lydi[9] = new pers(10, "Зулус");
+            lydi[10] = new pers(11, "Соколов");
+            lydi[11] = new pers(12, "Ковальский");
+
 
             int x = 0;
             for (int i = 0; i < lydi.Length; i++)
