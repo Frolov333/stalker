@@ -14,7 +14,8 @@ namespace WindowsFormsApp2
     {
         public Person()
         {
-            InitializeComponent();
+            InitializeComponent(//string name);
+          //  label1.Text = name;
         }
 
         private void button1_Click(object sender, EventArgs e)
