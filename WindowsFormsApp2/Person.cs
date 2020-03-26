@@ -12,13 +12,21 @@ namespace WindowsFormsApp2
 {
     public partial class Person : Form
     {
-        public Person()
+        public Person(pers p)
         {
-            InitializeComponent(//string name);
-          //  label1.Text = name;
+            InitializeComponent();
+
+            label1.Text = p.name;
+            label3.Text = p.role;
+            label2.Text = "Появился в " + p.part.ToString() + " части";
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Person_Load(object sender, EventArgs e)
         {
 
         }
