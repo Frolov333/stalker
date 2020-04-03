@@ -19,6 +19,7 @@ namespace WindowsFormsApp2
             label1.Text = p.name;
             label3.Text = p.role;
             label2.Text = "Появился в " + p.part.ToString() + " части";
+            pictureBox1.Image = p.pictureBox1.Image;
         }
 
         private void button1_Click(object sender, EventArgs e)

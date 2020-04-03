@@ -38,10 +38,10 @@ namespace WindowsFormsApp2
             lydi[2] = new pers(1, "Меченый", "Положительная");
             lydi[3] = new pers(2, "Стрелок", "Положительная");
             lydi[4] = new pers(2, "Шрам", "Отрицательная");
-            lydi[5] = new pers(3, "Шакал","Отрицательная");
+            lydi[5] = new pers(3, "Шакал", "Отрицательная");
             lydi[6] = new pers(3, "Чёрный", "Отрицательная");
-            lydi[7] = new pers(3, "Дегтярёв","Положительная");
-            lydi[8] = new pers(2, "Йога","Отрицательная");
+            lydi[7] = new pers(3, "Дегтярёв", "Положительная");
+            lydi[8] = new pers(2, "Йога", "Отрицательная");
             lydi[9] = new pers(3, "Зулус", "Положительная");
             lydi[10] = new pers(3, "Соколов", "Положительная");
             lydi[11] = new pers(3, "Ковальский", "Положительная");
@@ -95,13 +95,26 @@ namespace WindowsFormsApp2
             for (int i = 0; i < lydi.Length; i++)
             {
                 lydi[i].button2.Visible = true;
+                lydi[i].pictureBox1.Visible = true;
+                //Совпадение имени
+                if (textBox2.Text != "" &&
+                    !lydi[i].name.Contains(textBox2.Text))
+                {
+                    lydi[i].button2.Visible = false;
+                    lydi[i].pictureBox1.Visible = false;            
+                }
+
+                //проверка части
                 if (textBox1.Text != "" &&
                     lydi[i].part != Convert.ToInt32(textBox1.Text))
                 {
                     lydi[i].button2.Visible = false;
+                    lydi[i].pictureBox1.Visible = false;
+
                 }
             }
         }
+                                   
 
         private void button2_Click(object sender, EventArgs e)
         {
