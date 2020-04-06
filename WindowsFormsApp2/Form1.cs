@@ -15,13 +15,7 @@ namespace WindowsFormsApp2
         public Form1()
         {
             InitializeComponent();
-        }
 
-        Dictionary<string, string> RusWords = new Dictionary<string, string>();
-        Dictionary<string, string> EnWords = new Dictionary<string, string>();
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
             RusWords.Add("Собака", "Собака");
             RusWords.Add("Кошка", "Кошка");
 
@@ -29,15 +23,27 @@ namespace WindowsFormsApp2
             EnWords.Add("Кошка", "Cat");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        Dictionary<string, string> RusWords = new Dictionary<string, string>();
+        Dictionary<string, string> EnWords = new Dictionary<string, string>();
+
+        private void Form1_Load(object sender, EventArgs e)
         {
-            button3.Text = RusWords["Собака"];
-            button4.Text = RusWords["Кошка"];
+          //  RusWords.Add("Собака", "Собака");
+          //  RusWords.Add("Кошка", "Кошка");
+
+          //  EnWords.Add("Собака", "Dog");
+          //  EnWords.Add("Кошка", "Cat");
         }
+
+    //    private void button1_Click(object sender, EventArgs e)
+    //    {
+  
+     //   }
 
         private void RU_Click(object sender, EventArgs e)
          {
-
+            button3.Text = RusWords["Собака"];
+            button4.Text = RusWords["Кошка"];
         }
 
         private void button2_Click(object sender, EventArgs e)

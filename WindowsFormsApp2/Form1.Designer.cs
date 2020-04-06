@@ -53,6 +53,7 @@
             this.textBox2.Size = new System.Drawing.Size(293, 20);
             this.textBox2.TabIndex = 1;
             this.textBox2.Text = "HESOYAM 250.000$ и здоровье FULLCIP-безконечные потроны\r\n\r\n";
+            this.textBox2.UseWaitCursor = true;
             // 
             // button1
             // 
@@ -106,7 +107,7 @@
             this.Controls.Add(this.textBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Справка";
             this.ResumeLayout(false);
             this.PerformLayout();
 

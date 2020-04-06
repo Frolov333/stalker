@@ -29,7 +29,7 @@ namespace WindowsFormsApp2
 
     public partial class Filter : Form
     {
-        pers[] lydi = new pers[17];
+        pers[] lydi = new pers[18];
         public Filter()
         {
             InitializeComponent();
@@ -50,6 +50,7 @@ namespace WindowsFormsApp2
             lydi[14] = new pers(3, "Шульга", "Нейтральная");
             lydi[15] = new pers(3, "Вано", "Положительная");
             lydi[16] = new pers(2, "Чехов", "Нейтральная");
+            lydi[17] = new pers(1, "Сахаров", "Положительная");
 
 
             int x = 0;
@@ -107,6 +108,15 @@ namespace WindowsFormsApp2
                 //проверка части
                 if (textBox1.Text != "" &&
                     lydi[i].part != Convert.ToInt32(textBox1.Text))
+                {
+                    lydi[i].button2.Visible = false;
+                    lydi[i].pictureBox1.Visible = false;
+
+                }
+
+                //проверка роли
+                if (comboBox1.Text != "" &&
+                    lydi[i].role != (comboBox1.Text))
                 {
                     lydi[i].button2.Visible = false;
                     lydi[i].pictureBox1.Visible = false;

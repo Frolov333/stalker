@@ -17,7 +17,7 @@ namespace WindowsFormsApp2
             InitializeComponent();
 
             label1.Text = p.name;
-            label3.Text = p.role;
+            label3.Text ="Роль" + p.role;
             label2.Text = "Появился в " + p.part.ToString() + " части";
             pictureBox1.Image = p.pictureBox1.Image;
         }
