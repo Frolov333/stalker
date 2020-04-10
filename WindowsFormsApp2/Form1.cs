@@ -51,5 +51,12 @@ namespace WindowsFormsApp2
             button3.Text = EnWords["Собака"];
             button4.Text = EnWords["Кошка"];
         }
+
+        private void Персонаж_Click(object sender, EventArgs e)
+        {
+            //Form2 form2 = new Form2
+            Form2 f = new Form2();
+            f.ShowDialog();
+        }
     }
 }

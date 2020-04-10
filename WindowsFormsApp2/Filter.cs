@@ -24,38 +24,32 @@ namespace WindowsFormsApp2
             role = role1;
             button2 = new Button();
             pictureBox1 = new PictureBox();
+
         }
     }
 
+ //   Dictionary<string, string> RusWords = new Dictionary<string, string>();
+//    Dictionary<string, string> EnWords = new Dictionary<string, string>();
+
     public partial class Filter : Form
     {
-        pers[] lydi = new pers[18];
+       List<pers> lydi = new List <pers>();
         public Filter()
         {
+
+            string[] lines = System.IO.File.ReadAllLines("Персонажи.txt");
+            foreach (string str in lines)
+            {
+                string[] parts = str.Split(new string[] { ", " }, StringSplitOptions.None);
+                pers pers1 = new pers(Convert.ToInt32(parts[0]), parts[1], (parts[2]));
+               lydi.Add(pers1);
+            }
+
             InitializeComponent();
-            lydi[0] = new pers(1, "Сидор", "Положительная");
-            lydi[1] = new pers(2, "Шустрый", "Нейтральная");
-            lydi[2] = new pers(1, "Меченый", "Положительная");
-            lydi[3] = new pers(2, "Стрелок", "Положительная");
-            lydi[4] = new pers(2, "Шрам", "Отрицательная");
-            lydi[5] = new pers(3, "Шакал", "Отрицательная");
-            lydi[6] = new pers(3, "Чёрный", "Отрицательная");
-            lydi[7] = new pers(3, "Дегтярёв", "Положительная");
-            lydi[8] = new pers(2, "Йога", "Отрицательная");
-            lydi[9] = new pers(3, "Зулус", "Положительная");
-            lydi[10] = new pers(3, "Соколов", "Положительная");
-            lydi[11] = new pers(3, "Ковальский", "Положительная");
-            lydi[12] = new pers(3, "Флинт", "Отрицательная");
-            lydi[13] = new pers(3, "Локи", "Нейтральная");
-            lydi[14] = new pers(3, "Шульга", "Нейтральная");
-            lydi[15] = new pers(3, "Вано", "Положительная");
-            lydi[16] = new pers(2, "Чехов", "Нейтральная");
-            lydi[17] = new pers(1, "Сахаров", "Положительная");
-
-
+            
             int x = 0;
             int y = 100;
-            for (int i = 0; i < lydi.Length; i++)
+            for (int i = 0; i < lydi.Count; i++)
             {
                 lydi[i].button2.Location = new Point(x, y);
                 lydi[i].button2.Size = new Size(100, 40);
@@ -82,9 +76,18 @@ namespace WindowsFormsApp2
                     x = 0;
                     y = y + 100;
                 }
+
+
             }
 
+             /*   RusWords.Add("Часть", "Часть");
+                RusWords.Add("Имя", "Имя");
+                RusWords.Add("Роль", "Роль");
 
+                EnWords.Add("Часть", "Part");
+                EnWords.Add("Имя", "Name");
+                EnWords.Add("Роль", "Role");
+                */
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -93,7 +96,7 @@ namespace WindowsFormsApp2
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < lydi.Length; i++)
+            for (int i = 0; i < lydi.Count; i++)
             {
                 lydi[i].button2.Visible = true;
                 lydi[i].pictureBox1.Visible = true;
@@ -128,7 +131,7 @@ namespace WindowsFormsApp2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < lydi.Length; i++)
+            for (int i = 0; i < lydi.Count; i++)
             {
                 if (sender == lydi[i].button2)
                 { 
@@ -151,6 +154,11 @@ namespace WindowsFormsApp2
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
         {
 
         }

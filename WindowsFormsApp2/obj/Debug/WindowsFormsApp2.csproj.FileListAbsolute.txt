@@ -23,3 +23,4 @@ C:\Users\илья\source\repos\stalker\WindowsFormsApp2\obj\Debug\WindowsFormsAp
 C:\Users\илья\source\repos\stalker\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
 C:\Users\илья\source\repos\stalker\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\илья\source\repos\stalker\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\илья\source\repos\stalker\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form2.resources

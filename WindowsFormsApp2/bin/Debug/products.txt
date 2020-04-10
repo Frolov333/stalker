@@ -1,0 +1,4 @@
+
+System.Windows.Forms.TextBox, Text: Cncdg2, Сахаров, Положительная
+System.Windows.Forms.TextBox, Text: афа2, Сахаров, Положительная
+System.Windows.Forms.TextBox, Text: сичсиПоложительная
