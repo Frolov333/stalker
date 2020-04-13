@@ -19,8 +19,38 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            System.IO.File.AppendAllText("products.txt",
-             Environment.NewLine + NameBox1 + "Положительная");
+            System.IO.File.AppendAllText("Персонажи.txt",
+                         Environment.NewLine +
+                         textBox1.Text + ", " +
+                         textBox2.Text + ", " +
+                         NameBox1.Text);
+
+            if(FileName !="")
+            {
+              System.IO.File.Copy(FileName, "../../Kartinki/" + textBox2.Text + ".jpg");
+            }
+           
+        }
+        string FileName = "";
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() ==
+    DialogResult.OK)
+            {
+                FileName = openFileDialog1.FileName;
+                pictureBox1.Load(FileName);
+            }
+            if (openFileDialog1.ShowDialog() ==
+                DialogResult.OK)
+            {
+                FileName = openFileDialog1.FileName;
+                pictureBox1.Load(FileName);
+            }
         }
     }
 }
