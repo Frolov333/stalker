@@ -16,6 +16,8 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
 
+            label1.Text = DateTime.Now.ToLongDateString();
+
             RusWords.Add("Собака", "Собака");
             RusWords.Add("Кошка", "Кошка");
 
@@ -57,6 +59,16 @@ namespace WindowsFormsApp2
             //Form2 form2 = new Form2
             Form2 f = new Form2();
             f.ShowDialog();
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToLongDateString();
         }
     }
 }
