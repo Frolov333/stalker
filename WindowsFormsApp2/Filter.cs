@@ -17,13 +17,15 @@ namespace WindowsFormsApp2
         public string role;
         public Button button2;
         public PictureBox pictureBox1;
-        public pers(int part1, string name1, string role1)
+        public string adress;
+        public pers(int part1, string name1, string role1, string adress1)
         {
             part = part1;
             name = name1;
             role = role1;
             button2 = new Button();
             pictureBox1 = new PictureBox();
+            adress = adress1;
 
         }
     }
@@ -41,7 +43,7 @@ namespace WindowsFormsApp2
             foreach (string str in lines)
             {
                 string[] parts = str.Split(new string[] { ", " }, StringSplitOptions.None);
-                pers pers1 = new pers(Convert.ToInt32(parts[0]), parts[1], (parts[2]));
+                pers pers1 = new pers(Convert.ToInt32(parts[0]), parts[1], (parts[2]), parts[3]);
                lydi.Add(pers1);
             }
 
