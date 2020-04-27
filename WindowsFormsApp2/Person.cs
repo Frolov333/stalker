@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Net;
+using System.Net.Mail;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -45,6 +46,40 @@ namespace WindowsFormsApp2
             wc.DownloadFile(p.adress,
                 "C:\\Users\\" + Environment.UserName + "\\Downloads\\" + p.name + ".pdf");
             MessageBox.Show("Сохранено в " + p.name + ".pdf");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MailAddress fromMailAddress = new MailAddress("ilyafrolov484@gmail.com");
+            MailAddress toAddress = new MailAddress("beavisabra@gmail.com");
+
+            using (MailMessage mailMessage = new MailMessage(fromMailAddress, toAddress))
+            using (SmtpClient smtpClient = new SmtpClient())
+            {
+                mailMessage.Subject = "Список персонажей";
+                mailMessage.Body = "Вот он" +
+                Environment.NewLine +
+                Environment.NewLine + "  персонаж|часть";
+
+                foreach (pers per1 in FIlter.lydi)
+                {
+                  //  mailMessage.Body += Environment.NewLine + 
+                        
+                }
+
+
+                smtpClient.Host = "smtp.gmail.com";
+                smtpClient.Port = 587;
+                smtpClient.EnableSsl = true;
+                smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+                smtpClient.UseDefaultCredentials = false;
+                smtpClient.Credentials = new NetworkCredential(
+                    fromMailAddress.Address,
+                    "LGBTF61278125");
+                
+
+                smtpClient.Send(mailMessage);
+                MessageBox.Show("Отправлено");            }
         }
     }
 }
