@@ -70,5 +70,11 @@ namespace WindowsFormsApp2
         {
             label1.Text = DateTime.Now.ToLongDateString();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form3 f = new Form3();
+            f.ShowDialog();
+        }
     }
 }

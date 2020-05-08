@@ -57,16 +57,8 @@ namespace WindowsFormsApp2
             using (SmtpClient smtpClient = new SmtpClient())
             {
                 mailMessage.Subject = "Список персонажей";
-                mailMessage.Body = "Вот он" +
-                Environment.NewLine +
-                Environment.NewLine + "  персонаж|часть";
-
-                foreach (pers per1 in FIlter.lydi)
-                {
-                  //  mailMessage.Body += Environment.NewLine + 
-                        
-                }
-
+                mailMessage.Body = "Вот он";
+                mailMessage.Body =
 
                 smtpClient.Host = "smtp.gmail.com";
                 smtpClient.Port = 587;
@@ -78,7 +70,7 @@ namespace WindowsFormsApp2
                     "LGBTF61278125");
                 
 
-                smtpClient.Send(mailMessage);
+               // smtpClient.Send(mailMessage);
                 MessageBox.Show("Отправлено");            }
         }
     }
